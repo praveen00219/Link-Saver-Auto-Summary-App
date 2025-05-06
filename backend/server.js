@@ -23,6 +23,7 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 // Routes
+app.get("/", (req, res) => res.send("API Working Fine"));
 app.use("/api/auth", userRoutes);
 app.use("/api/bookmarks", bookmarkRoutes);
 
